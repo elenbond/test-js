@@ -291,7 +291,7 @@ function createArrayOfNumbers(min, max) {
   const numbers = [];
   number = numbers.push(min);
   for(let i = min; i <= max; i+=1) {
-    number = numbers.push(--i);
+    numbers.push(--i);
   }
   return numbers;
 }
