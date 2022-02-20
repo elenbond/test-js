@@ -286,13 +286,117 @@
 // }
 // findLongestWord("The quick brown fox jumped over the lazy dog");
 
+// module2  22
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
+//   for(let i = min; i <= max; i+=1) {
+//     numbers.push(i);
+//   }
+//   return numbers;
+// }
+// console.log(createArrayOfNumbers(1, 3));
 
-function createArrayOfNumbers(min, max) {
+// module2 23
+// function filterArray(numbers, value) {
+//   let number = [];
+//   // ----- first variant -------
+//   for (let i = 0; i <= numbers.length; i += 1) {
+//     if (i > value) {
+//       number.push(i)
+//     }
+//   }
+//   // ------ second variant -------
+//   // for (let k of numbers) {
+//   //   if (k > value) {
+//   //     number.push(k)
+//   //   }
+//   // }
+//   return number;
+// }
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+
+// ========== LESSON WITH A MENTOR ==========
+// const products = [ {
+//     id : 'sku1',
+//     qty: 1,
+// }, {
+//     id : 'sku2',
+//     qty: 2,
+// }, {
+//     id : 'sku3',
+//     qty: 3,
+// }, {
+//     id : 'sku1',
+//     qty: 6,
+// }, {
+//     id : 'sku1',
+//     qty: 8,
+// }, {
+//     id : 'sku2',
+//     qty: 19,
+// }, {
+//     id : 'sku4',
+//     qty: 1,
+// }]
+//Потрібно перебрати масив і якщо він має об'єкти в яких дублюються айді то квонтіті цих елементів потрібно сплюсувати а той обє'кт який співпав видалити з масиву.
+//(Потрібно мутувати даний масив, створювати новий не потрібно)
+
+// module2 25
+// function getCommonElements(array1, array2) {
+//   const newArray = [];
+//   // for (let i of array1) {
+//   //   if (array2.includes(i)) {
+//   //     newArray.push(i);
+//   //   }
+//   // }
+//   for (let i = 0; i <= array1.length; i += 1){
+//     if (array2.includes(array1[i])) {
+//       newArray.push(array1[i]);
+//     }
+//   }
+//   return newArray;
+// }
+
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
+// console.log(getCommonElements([1, 2, 3], [10, 20, 30]));
+// console.log(getCommonElements([6, 7, 8], [3, 5, 9]));
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
+
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   for (let i of order) {
+//     total += i;
+//   }
+//   return total;
+// }
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+
+// function filterArray(numbers, value) {
+//   const filteredNumbers = [];
+  
+//   for (let i of numbers) {
+//     const number = i;
+
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   }
+//   return filteredNumbers;
+// }
+// console.log(filterArray([12, 24, 8, 41, 76], 38));
+
+// module2 29
+function getEvenNumbers(start, end) {
+   // Change code below this line
   const numbers = [];
-  number = numbers.push(min);
-  for(let i = min; i <= max; i+=1) {
-    numbers.push(--i);
+  const newArray = [];
+  for (let i = start; i <= end; i += 1){
+    if (i % 2 === 0) {
+      numbers.push(i);
+    }
   }
   return numbers;
 }
-console.log(createArrayOfNumbers(1, 3));
+console.log(getEvenNumbers(3, 11));
+console.log(getEvenNumbers(2, 20));
