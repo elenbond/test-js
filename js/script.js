@@ -387,16 +387,38 @@
 // console.log(filterArray([12, 24, 8, 41, 76], 38));
 
 // module2 29
-function getEvenNumbers(start, end) {
-   // Change code below this line
-  const numbers = [];
-  const newArray = [];
-  for (let i = start; i <= end; i += 1){
-    if (i % 2 === 0) {
-      numbers.push(i);
-    }
-  }
-  return numbers;
-}
-console.log(getEvenNumbers(3, 11));
-console.log(getEvenNumbers(2, 20));
+// function getEvenNumbers(start, end) {
+//    // Change code below this line
+//   const numbers = [];
+//   const newArray = [];
+//   for (let i = start; i <= end; i += 1){
+//     if (i % 2 === 0) {
+//       numbers.push(i);
+//     }
+//   }
+//   return numbers;
+// }
+// console.log(getEvenNumbers(3, 11));
+// console.log(getEvenNumbers(2, 20));
+
+// function includes(array, value) {
+//   // 1st variant
+
+//   for(let i of array){
+//     if(i === value) {
+//       return true;
+//     } 
+//   }
+//   return false;
+//   // 2nd variant
+
+//   // for (let j = 0; j <= array.length; j++) {
+//   //   if (array[j] === value) {
+//   //     return true;
+//   //   }
+//   // }
+//   // return false;
+// }
+// console.log(includes([1, 2, 3, 4, 5], 3));
+// console.log(includes([1, 2, 3, 4, 5], 17));
+// console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus"))
