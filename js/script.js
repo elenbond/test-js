@@ -940,3 +940,373 @@
 // console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"))
 // console.log(atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion"))
 // console.log(this.potionIndex)
+
+// #3
+// function makePizza(pizzaName, callback) {
+//  console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
+//   callback(pizzaName);
+// }
+
+// makePizza("Royal Grand", function deliverPizza(pizzaName) {
+//     console.log(`Delivering pizza ${pizzaName}.`);
+// });
+// // Change code below this line
+
+// makePizza("Ultracheese", function eatPizza(pizzaName) {
+//     console.log(`Eating pizza ${pizzaName}.`);
+// });
+
+// #4
+// const pizzaPalace = {
+//     pizzas: ["Ultracheese", "Smoked", "Four meats"],
+//     order(pizzaName, onSuccess, onError) {
+//         for (let i = 0; i < this.pizzas.length; i += 1){
+//             if (pizzaName === this.pizzas[i])
+//             {
+//                 onSuccess(pizzaName);
+//                 return makePizza(pizzaName);
+//             }
+//         }
+//         onError(pizzaName);
+//         return onOrderError(`There is no pizza with a name ${pizzaName} in the assortment.`);
+//     },
+// };
+
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+
+// // Callback for onError
+// function onOrderError(error) {
+//   return `Error! ${error}`;
+// }
+
+// // Method calls with callbacks
+// pizzaPalace.order("Smoked", makePizza, onOrderError);
+// pizzaPalace.order("Four meats", makePizza, onOrderError);
+// pizzaPalace.order("Big Mike", makePizza, onOrderError);
+// pizzaPalace.order("Vienna", makePizza, onOrderError);
+
+// console.log(pizzaPalace.order("Smoked", makePizza, onOrderError));
+// console.log(pizzaPalace.order("Four meats", makePizza, onOrderError));
+// console.log(pizzaPalace.order("Big Mike", makePizza, onOrderError));
+// console.log(pizzaPalace.order("Vienna", makePizza, onOrderError));
+
+// #5
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+//     orderedItems.forEach(function (number) {
+//         totalPrice += number;
+//   })
+//   return totalPrice;
+// }
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+
+// #6
+// function filterArray(numbers, value) {
+//   const filteredNumbers = [];
+//     numbers.forEach(function (number) {
+//         if (number > value) {
+//             filteredNumbers.push(number);
+//         }
+//     });
+//   return filteredNumbers;
+// }
+// console.log(filterArray([1, 2, 3, 4, 5], 4));
+
+// #7
+// function getCommonElements(firstArray, secondArray) {
+//   const commonElements = [];
+//     firstArray.forEach(function (number) {
+//         if (secondArray.includes(number)) {
+//             commonElements.push(number);
+//         };
+//     });
+//   return commonElements;
+// }
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
+
+// #13
+// const changeEven = (numbers, value) => {
+//     newNumbers = [];
+//     numbers.forEach((number) => {
+//         if (number % 2 === 0) {
+//             newNumbers.push(number + value);
+//         } else {
+//              newNumbers.push(number);
+//         }
+//     });
+//     return newNumbers;
+// }
+// console.log(changeEven([2, 8, 3, 7, 4, 6], 10));
+// console.log(changeEven([1, 2, 3, 4, 5], 10));
+
+// #15
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+
+// const titles = books.map(book => book.title);
+// console.log(titles);
+
+// const users = [
+//     {
+//         name: "Moore Hensley",
+//         email: "moorehensley@indexia.com",
+//         eyeColor: "blue",
+//         friends: ["Sharron Pace"],
+//         isActive: false,
+//         balance: 2811,
+//         gender: "male"
+//     },
+//     {
+//         name: "Sharlene Bush",
+//         email: "sharlenebush@tubesys.com",
+//         eyeColor: "blue",
+//         friends: ["Briana Decker", "Sharron Pace"],
+//         isActive: true,
+//         balance: 3821,
+//         gender: "female"
+//     },
+//     {
+//         name: "Ross Vazquez",
+//         email: "rossvazquez@xinware.com",
+//         eyeColor: "green",
+//         friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//         isActive: false,
+//         balance: 3793,
+//         gender: "male"
+//     },
+//     {
+//         name: "Elma Head",
+//         email: "elmahead@omatom.com",
+//         eyeColor: "green",
+//         friends: ["Goldie Gentry", "Aisha Tran"],
+//         isActive: true,
+//         balance: 2278,
+//         gender: "female"
+//     },
+//     {
+//         name: "Carey Barr",
+//         email: "careybarr@nurali.com",
+//         eyeColor: "blue",
+//         friends: ["Jordan Sampson", "Eddie Strong", "Adrian Cross"],
+//         isActive: true,
+//         balance: 3951,
+//         gender: "male"
+//     },
+//     {
+//         name: "Blackburn Dotson",
+//         email: "blackburndotson@furnigeer.com",
+//         eyeColor: "brown",
+//         friends: ["Jacklyn Lucas", "Linda Chapman", "Adrian Cross", "Solomon Fokes"],
+//         isActive: false,
+//         balance: 1498,
+//         gender: "male"
+//     },
+//     {
+//         name: "Sheree Anthony",
+//         email: "shereeanthony@kog.com",
+//         eyeColor: "brown",
+//         friends: ["Goldie Gentry", "Briana Decker"],
+//         isActive: true,
+//         balance: 2764,
+//         gender: "female"
+//     }
+// ];
+
+// #24
+// const getUsersWithFriend = (users, friendName) => {
+//    const userFriend = users.filter(friend => friend.friends.includes(friendName));
+//    return userFriend;
+// };
+
+// console.log(getUsersWithFriend(users, "Briana Decker"));
+
+// #25
+// const getFriends = (users) => {
+//     const allFriends = users.flatMap(user => user.friends);
+//     const uniqueUsersFriends = allFriends.filter(
+//         (friend, index) => allFriends.indexOf(friend) === index);
+//    return uniqueUsersFriends;
+// };
+// console.log(getFriends(users));
+
+// #26
+// const getActiveUsers = (users) => {
+//     const activeUsers = users.filter(user => user.isActive === true);
+//     return activeUsers;
+// };
+// console.log(getActiveUsers(users));
+
+// #35
+// const players = [
+//   { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//   { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//   { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//   { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
+// const totalAveragePlaytimePerGame = players.reduce((total, player) => {
+//     // const time = ;
+//     return total + player.playtime/player.gamesPlayed;
+// }, 0);
+// console.log(totalAveragePlaytimePerGame);
+
+// #36
+// const calculateTotalBalance = users => {
+//     const totalBalance = users.reduce((total, user) => {
+//         return total + user.balance;
+//     }, 0);
+//     return totalBalance;
+// };
+// console.log(calculateTotalBalance(users));
+
+// #37
+// const getTotalFriendCount = users => {
+//     const allFriends = users.reduce((total, user) => {
+//        return total + user.friends.length;
+//    }, 0);
+//    return allFriends;
+// };
+// console.log(getTotalFriendCount(users));
+
+// #40
+// const authors = [
+//   "Tanith Lee",
+//   "Bernard Cornwell",
+//   "Robert Sheckley",
+//   "Fyodor Dostoevsky",
+//   "Howard Lovecraft",
+// ];
+
+// const authorsInAlphabetOrder = [...authors].sort((a, b) => a.localeCompare(b));
+
+// const authorsInReversedOrder = [...authors].sort((a, b) => b.localeCompare(a));
+// console.log(authorsInAlphabetOrder);
+// console.log(authorsInReversedOrder);
+
+// #41 example
+// const students = [
+//   { name: "Mango", score: 83 },
+//   { name: "Poly", score: 59 },
+//   { name: "Ajax", score: 37 },
+//   { name: "Kiwi", score: 94 },
+// ];
+
+// const inAscendingScoreOrder = students.sort(
+//   (firstStudent, secondStudent) => firstStudent.score - secondStudent.score
+// );
+
+// const inDescendingScoreOrder = students.sort(
+//   (firstStudent, secondStudent) => secondStudent.score - firstStudent.score
+// );
+
+// const inAlphabeticalOrder = students.sort((firstStudent, secondStudent) =>
+//   firstStudent.name.localeCompare(secondStudent.name)
+// );
+// console.log(inAscendingScoreOrder)
+// console.log(inDescendingScoreOrder)
+// console.log(inAlphabeticalOrder)
+
+// #41
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+// const sortedByAuthorName = [...books].sort((firstBook, secondBook) =>
+//     firstBook.author.localeCompare(secondBook.author));
+
+// const sortedByReversedAuthorName = [...books].sort((firstBook, secondBook) =>
+//     secondBook.author.localeCompare(firstBook.author));
+
+// const sortedByAscendingRating = [...books].sort((firstBook, secondBook) =>
+//     firstBook.rating - secondBook.rating);
+
+// const sortedByDescentingRating = [...books].sort((firstBook, secondBook) =>
+//     secondBook.rating - firstBook.rating);
+
+// console.log(sortedByAuthorName)
+// console.log(sortedByReversedAuthorName)
+// console.log(sortedByAscendingRating)
+// console.log(sortedByDescentingRating)
+
+// #42
+// const sortByAscendingBalance = users => {
+//     const sortedBalance = [...users].sort((firstUser, secondUser) => 
+//         firstUser.balance - secondUser.balance);
+//     return sortedBalance;
+// };
+// console.table(sortByAscendingBalance(users));
+
+// #43
+// const sortByDescendingFriendCount = users => {
+//     const amountOfFriends = [...users].sort((firstUser, lastUser) =>
+//         lastUser.friends.length - firstUser.friends.length);
+//    return amountOfFriends;
+// };
+
+// console.log(sortByDescendingFriendCount(users));
+
+// #46
+// const getNamesSortedByFriendCount = users => {
+//     const namesList = [...users]
+//         .sort((oneFriend, manyFriends) => oneFriend.friends.length - manyFriends.friends.length)
+//         .map(user => user.name);
+
+//     return namesList;
+// };
+// console.log(getNamesSortedByFriendCount(users));
+
+// #47
+// const getSortedFriends = users => {
+//     const friendsList = [...users]
+//         .flatMap(user => user.friends)
+//         .filter((course, index, array) => array.indexOf(course) === index)
+//         .sort((firstName, lastName) => firstName.localeCompare(lastName));
+//     return friendsList;
+// };
+// console.log(getSortedFriends(users));
+
+// #48
+// const getTotalBalanceByGender = (users, gender) => {
+//     const userBalance = [...users]
+//         .filter(user => user.gender === gender)
+//         .reduce((total, user) =>
+//         { return total + user.balance }, 0);
+//     return userBalance;
+// };
+// console.log(getTotalBalanceByGender(users, "female"));
+// console.log(getTotalBalanceByGender(users, "male"));
+
